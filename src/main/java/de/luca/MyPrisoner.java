@@ -23,11 +23,11 @@ public class MyPrisoner implements Prisoner {
     }
 
     public boolean chronicBetrayer() {
-        if (history.size() < 3) {
+        if (history.size() < 4) {
             return false;
         }
         int betrayed = 0;
-        for (int i = 0; i < Math.min(3, history.size()); i++) {
+        for (int i = 0; i < Math.min(5, history.size()); i++) {
             PastEvent event = history.get(history.size() - 1 - i);
             if (event.oppMove.equals(PrisonerMessResult.BETRAY)) {
                 betrayed++;
